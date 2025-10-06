@@ -10,17 +10,17 @@ class Libro:
             self.prestado = True
             print(f"Gracias por prestar {self.titulo} :)")
         else:
-            print(f"{self.titulo} ya ha sido prestado :(")
+            print(f"{self.titulo} no se puede prestar, ya alguien lo tiene :(")  # en lugar de "ya ha sido prestado :("
     
     def devolver(self):
         if self.prestado:
             self.prestado = False
             print(f"Gracias por devolver {self.titulo} :)")
         else:
-            print(f"No se puede devolver {self.titulo} porque no estaba prestado")
+            print(f"{self.titulo} no estaba prestado, imposible devolver")  # en lugar del mensaje original
     
     def mostrarInfo(self):
-        estado = "PRESTADO" if self.prestado else "DISPONIBLE"
+        estado = "EN USO" if self.prestado else "LIBRE"  # en lugar de "PRESTADO"/"DISPONIBLE"
         print(f"Título: {self.titulo}")
         print(f"Autor: {self.autor}")
         print(f"Año: {self.año}")
@@ -28,7 +28,7 @@ class Libro:
         print("-" * 25)
 
 # Creación de los tres libros
-libro1 = Libro("Orgullo y Prejuicio", "Jane Austen", 1810)
+libro1 = Libro("Orgullo y Prejuicio", "Jane Austen", 1811)  # cambio para conflicto
 libro2 = Libro("Harry Potter", "J.K. Rowling", 1999)
 libro3 = Libro("Hunger Games", "Suzanne Collins", 2010)
 
