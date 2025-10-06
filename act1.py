@@ -1,5 +1,5 @@
-print("hola a todos")
+print("¡Hola mundo!")
 
 def suma(a, b):
-    return a + b / b ** 2   
+    return a + b + 1
 print(suma(3, 5))
